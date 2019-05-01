@@ -6,89 +6,76 @@ const Validation = {
         licenseYears_inCorrect: "Musisz posiadać prawo jazdy przynajmiej 1 rok..",
         password_inCorrect: "Hasło musi sie składać z minimum 8 znaków",
         passwordCheck_inCorrect: "Hasła nie są takie same",
-        checkbox_inAccept: "Nie zaakceptowałes regulaminu",
-        joinReasonMsg_inAccept: "Wiadomość musi się składać z minimum 10 znaków",
+        checkbox_inCorrect: "Nie zaakceptowałes regulaminu",
+        joinReasonMsg_inCorrect: "Wiadomość musi się składać z minimum 10 znaków",
         gender_inCorrect: "Wybierz płeć"
     },
-    formValidation: (data) => {
+    stage2: (data, stage) => {
         let userName = false;
         let userSurname = false;
+        let licenseYears = false;
         let email = false;
         let password = false;
         let passwordCheck = false;
-        let accept = false;
+        let joinReasonMsg = false;
+        let gender = false;
+        let regAccept = false;
+        let newsAccept = false;
         let correct = false;
-        if (data.username.length < 4) {
+        if (!(data.userName.length < 4)) {
             userName = true
         }
+        if (!(data.userSurname.length < 4)) {
+            userSurname = true
+        }
+        if (data.gender === "male" || data.gender === "female") {
+            gender = true
+        }
+        if (data.licenseYears > 0 ) {
+            licenseYears = true
+        }
+        if (data.joinReasonMsg.length > 10) {
+            joinReasonMsg = true
+        }
+        // 3
         if (data.email.indexOf("@") !== -1) {
             email = true
+        } 
+        if (data.password === data.passwordCheck) {
+            passwordCheck = true
         }
         if (data.password.length >= 8) {
             password = true
 
         }
-        if (data.accept) {
-            accept = true
+        // stage 1
+        if (stage === 1) {
+            if (userName && userSurname) {
+                correct = true
+            }
         }
-        if (userName && email && password && accept) {
-            correct = true
+        // stage 2
+        if (stage === 2) {
+            if (gender && joinReasonMsg && licenseYears) {
+                correct = true
+            }
         }
-        return ({
-            userName,
-            password,
-            accept,
-            email,
-            correct
-        })
-    },
-    stage1: (data) => {
-        let userName = false;
-        let userSurname = false;
-        let correct = false;
-        if (!(data.userName.length < 4)) {
-            userName = true
-        }
-        if (!(data.userName.length < 4)) {
-            userSurname = true
-        }
-        if (userName && userSurname) {
-            correct = true
+        if (stage === 3){
+            if (email && password && passwordCheck) {
+                correct = true
+            }
         }
         return ({
             userName,
             userSurname,
+            licenseYears,
+            email,
+            password,
+            joinReasonMsg,
+            gender,
+            regAccept,
+            newsAccept,
             correct
-        })
-    },
-    stage2: (data) => {
-        userName = false,
-            userSurname = false,
-            licenseYears = false,
-            email = false,
-            password = false,
-            joinReasonMsg = false,
-            gender = false,
-            regAccept = false,
-            newsAccept = false,
-            if (data.gender === "male" || data.gender === "female") {
-                gender = true
-            }
-        if (data.licenseYears <= 0) {
-            licenseYears = true
-        }
-        if (data.joinReasonMsg.length < 10) {
-            joinReasonMsg = true
-        }
-        return ({
-            userSurname ,
-            licenseYears ,
-            email ,
-            password ,
-            joinReasonMsg ,
-            gender ,
-            regAccept ,
-            newsAccept ,
         })
     }
 }
