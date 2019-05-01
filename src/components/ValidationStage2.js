@@ -29,8 +29,11 @@ const ValidationStage2 = props => {
 
                 </div>
             </div>
-            <button type="button" onClick={props.move.bind(null, 1)} className="btn btn-primary btnContinue">Wróc</button>
+            <div className="pagination">
+            <button type="button" onClick={props.move.bind(null, 1)} className="btn btn-primary btnComeBack">Wróc</button>
             <button type="button" onClick={props.validate.bind(null, 2)} className="btn btn-primary btnContinue">Dalej</button>
+            </div>
+            
         </>
     )
 }

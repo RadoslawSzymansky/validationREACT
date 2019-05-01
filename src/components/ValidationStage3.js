@@ -8,7 +8,6 @@ const ValidationStage3 = (props) => {
                 <div className="col-sm-9">
                     <input onChange={props.change} value={props.state.email} name="email" type="email" className="form-control" id="emailInput" placeholder="jan_kowalski@gmail.com" />
                     {props.errors.email && <span className="warning">{Validation.messages.email_inCorrect}</span>}
-
                 </div>
             </div>
             <div className="form-group row">
@@ -27,18 +26,21 @@ const ValidationStage3 = (props) => {
             </div>
             <div className="form-group row">
                 <div className="col-sm-12">
-                    <input onChange={props.change} value={props.state.regAccept} className="form-check-input" name="regAccept" type="checkbox" value="" id="regAccept" />
+                    <input onChange={props.change} value={props.state.regAccept} className="form-check-input" name="regAccept" type="checkbox"  id="regAccept" />
                     <label htmlFor="regAccept" className="checkLabel">Czy akceptujesz regulamin</label>
-                    {props.errors.regAccept && <span className="warning">{Validation.messages.regAccept_inCorrect}</span>}
+                    {props.errors.regAccept && <p className="warning">{Validation.messages.regAccept_inCorrect}</p>}
 
                 </div>
                 <div className="col-sm-12">
-                    <input className="form-check-input" name="newsAccept" type="checkbox" value="" id="regAccept" />
+                    <input className="form-check-input" name="newsAccept" type="checkbox"  id="newsAccept" />
                     <label htmlFor="newsAccept" className="checkLabel">Zapisz mnie na newsletter.</label>
                 </div>
             </div>
-            <button type="button" onClick={props.move.bind(null, 2)} className="btn btn-primary btnContinue">Wróc</button>
-            <button type="button" onClick={()=>{props.validate(3)}} className="btn btn-primary btnContinue">Dalej</button>
+            <div className="pagination">
+            <button type="button" onClick={props.move.bind(null, 2)} className="btn btn-primary btnComeBack">Wróc</button>
+            <button type="button" onClick={()=>{props.validate(3)}} className="btn btn-primary btnContinue">Dołącz!</button>
+            </div>
+            
         </>
     )
 }

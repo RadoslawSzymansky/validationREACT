@@ -6,7 +6,7 @@ import ValidationStage3 from "../components/ValidationStage3"
 import Validation from "../components/Validation"
 class Join extends React.Component {
     state = {
-        activeStage: 3,
+        activeStage: 1,
         userName: "",
         userSurname: "",
         licenseYears: 0,
@@ -16,6 +16,7 @@ class Join extends React.Component {
         gender: "",
         regAccept: false,
         newsAccept: false,
+        passwordCheck: "",
         errors: {
             userName: false,
             userSurname: false,
@@ -30,13 +31,12 @@ class Join extends React.Component {
         message: false
     }
 
-    handleSubmitFormClub = e => {
-        e.preventDefault()
-        console.log('a')
+    handleSubmitForm = () => {
+        console.log('tu mozna zaczać wysylanie danych, walidacja po stronie klienta przebigla pomyslnie')
     }
     validateStage = stage => {
         console.log("walidauje etap", stage)
-        const validation = Validation.stage2(this.state, stage)
+        const validation = Validation.validate(this.state, stage)
         console.log(validation)
         if (validation.correct) {
             console.log("ok")
@@ -57,6 +57,8 @@ class Join extends React.Component {
             })
             if (stage !== 3) {
                 this.move(stage+1)
+            }else{
+                this.handleSubmitForm()
             }
         } else {
             this.setState({

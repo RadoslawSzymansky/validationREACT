@@ -6,11 +6,11 @@ const Validation = {
         licenseYears_inCorrect: "Musisz posiadać prawo jazdy przynajmiej 1 rok..",
         password_inCorrect: "Hasło musi sie składać z minimum 8 znaków",
         passwordCheck_inCorrect: "Hasła nie są takie same",
-        checkbox_inCorrect: "Nie zaakceptowałes regulaminu",
+       regAccept_inCorrect: "Nie zaakceptowałes regulaminu",
         joinReasonMsg_inCorrect: "Wiadomość musi się składać z minimum 10 znaków",
         gender_inCorrect: "Wybierz płeć"
     },
-    stage2: (data, stage) => {
+    validate: (data, stage) => {
         let userName = false;
         let userSurname = false;
         let licenseYears = false;
@@ -60,6 +60,7 @@ const Validation = {
                 correct = true
             }
         }
+        // stage 3
         if (stage === 3){
             if (email && password && passwordCheck) {
                 correct = true

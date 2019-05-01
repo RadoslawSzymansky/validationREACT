@@ -35,4 +35,13 @@
         color: red;
         font-size: 10px;
     }
+    .pagination{
+        display: flex;
+        .btnComeBack{
+            display: block;
+            margin-top: 40px;
+            margin-right: auto;
+            padding: 5px 25px;
+        }
+    }
 }
