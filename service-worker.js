@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/RadoslawSzymansky/validationREACT/precache-manifest.91cab6a0634be086eddfa300d8d5d33c.js"
+  "/RadoslawSzymansky/validationREACT/precache-manifest.1b3252e6afc92831c266de4b9440f437.js"
 );
 
 self.addEventListener('message', (event) => {
