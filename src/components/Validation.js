@@ -6,7 +6,7 @@ const Validation = {
         licenseYears_inCorrect: "Musisz posiadać prawo jazdy przynajmiej 1 rok..",
         password_inCorrect: "Hasło musi sie składać z minimum 8 znaków",
         passwordCheck_inCorrect: "Hasła nie są takie same",
-       regAccept_inCorrect: "Nie zaakceptowałes regulaminu",
+        regAccept_inCorrect: "Nie zaakceptowałes regulaminu",
         joinReasonMsg_inCorrect: "Wiadomość musi się składać z minimum 10 znaków",
         gender_inCorrect: "Wybierz płeć"
     },
@@ -31,16 +31,18 @@ const Validation = {
         if (data.gender === "male" || data.gender === "female") {
             gender = true
         }
-        if (data.licenseYears > 0 ) {
+        if (data.regAccept) {
+            regAccept = true
+        }
+        if (data.licenseYears > 0) {
             licenseYears = true
         }
-        if (data.joinReasonMsg.length > 10) {
+        if (data.joinReasonMsg.length >= 10) {
             joinReasonMsg = true
         }
-        // 3
         if (data.email.indexOf("@") !== -1) {
             email = true
-        } 
+        }
         if (data.password === data.passwordCheck) {
             passwordCheck = true
         }
@@ -48,21 +50,19 @@ const Validation = {
             password = true
 
         }
-        // stage 1
+        // validation for exact stage:
         if (stage === 1) {
             if (userName && userSurname) {
                 correct = true
             }
         }
-        // stage 2
         if (stage === 2) {
             if (gender && joinReasonMsg && licenseYears) {
                 correct = true
             }
         }
-        // stage 3
-        if (stage === 3){
-            if (email && password && passwordCheck) {
+        if (stage === 3) {
+            if (email && password && passwordCheck && regAccept) {
                 correct = true
             }
         }
