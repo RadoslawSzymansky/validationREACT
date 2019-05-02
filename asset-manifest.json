@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/RadoslawSzymansky/validationREACT/static/css/main.05311b36.chunk.css",
-    "main.js": "/RadoslawSzymansky/validationREACT/static/js/main.d10066b9.chunk.js",
-    "main.js.map": "/RadoslawSzymansky/validationREACT/static/js/main.d10066b9.chunk.js.map",
-    "runtime~main.js": "/RadoslawSzymansky/validationREACT/static/js/runtime~main.fb2139d3.js",
-    "runtime~main.js.map": "/RadoslawSzymansky/validationREACT/static/js/runtime~main.fb2139d3.js.map",
-    "static/css/2.266e55a5.chunk.css": "/RadoslawSzymansky/validationREACT/static/css/2.266e55a5.chunk.css",
-    "static/js/2.12615368.chunk.js": "/RadoslawSzymansky/validationREACT/static/js/2.12615368.chunk.js",
-    "static/js/2.12615368.chunk.js.map": "/RadoslawSzymansky/validationREACT/static/js/2.12615368.chunk.js.map",
-    "index.html": "/RadoslawSzymansky/validationREACT/index.html",
-    "precache-manifest.1b3252e6afc92831c266de4b9440f437.js": "/RadoslawSzymansky/validationREACT/precache-manifest.1b3252e6afc92831c266de4b9440f437.js",
-    "service-worker.js": "/RadoslawSzymansky/validationREACT/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/RadoslawSzymansky/validationREACT/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.05311b36.chunk.css.map": "/RadoslawSzymansky/validationREACT/static/css/main.05311b36.chunk.css.map"
+    "main.css": "/validationREACT/static/css/main.05311b36.chunk.css",
+    "main.js": "/validationREACT/static/js/main.4d07504e.chunk.js",
+    "main.js.map": "/validationREACT/static/js/main.4d07504e.chunk.js.map",
+    "runtime~main.js": "/validationREACT/static/js/runtime~main.d4bab4e3.js",
+    "runtime~main.js.map": "/validationREACT/static/js/runtime~main.d4bab4e3.js.map",
+    "static/css/2.266e55a5.chunk.css": "/validationREACT/static/css/2.266e55a5.chunk.css",
+    "static/js/2.12615368.chunk.js": "/validationREACT/static/js/2.12615368.chunk.js",
+    "static/js/2.12615368.chunk.js.map": "/validationREACT/static/js/2.12615368.chunk.js.map",
+    "index.html": "/validationREACT/index.html",
+    "precache-manifest.0cd2a8816b8e34fcbce34ebf285bbc18.js": "/validationREACT/precache-manifest.0cd2a8816b8e34fcbce34ebf285bbc18.js",
+    "service-worker.js": "/validationREACT/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/validationREACT/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.05311b36.chunk.css.map": "/validationREACT/static/css/main.05311b36.chunk.css.map"
   }
 }
